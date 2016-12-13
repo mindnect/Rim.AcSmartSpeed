@@ -46,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ACSmartSpeed.cs" />
+    <Compile Include="AcSmartSpeed.cs" />
     <Compile Include="Detouring\Detour.cs" />
     <Compile Include="Detouring\TexButton.cs" />
     <Compile Include="Detouring\TickManager.cs" />
@@ -74,6 +74,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /E /Y "$(ProjectDir)Mod" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\A16-Smart Speed"</PostBuildEvent>
+    <PostBuildEvent>xcopy /E /Y /I "$(ProjectDir)Mod" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\$(TargetName)\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

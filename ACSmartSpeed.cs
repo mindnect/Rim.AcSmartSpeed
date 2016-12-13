@@ -25,9 +25,9 @@ namespace AlcoholV
 
         static AcSmartSpeed()
         {
-            Log.Message(AssemblyName + " Initializing.");
             InitUltraFastMode();
             InitEventSpeedControl();
+            Log.Message(AssemblyName + " injected.");
         }
 
         private static Assembly Assembly => Assembly.GetAssembly(typeof(AcSmartSpeed));
