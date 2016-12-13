@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<EventSpeed>Event Speed</EventSpeed>
+	<SetEventSpeed>Change Event Speed</SetEventSpeed>
+	<ACSmartSpeedSlow>Slow</ACSmartSpeedSlow>
+	<ACSmartSpeedNormal>Normal</ACSmartSpeedNormal>
+	<ACSmartSpeedFast>Fast</ACSmartSpeedFast>
+	<ACSmartSpeedHalf>Half</ACSmartSpeedHalf>
+	<ACSmartSpeedIgnore>Ignore</ACSmartSpeedIgnore>
+</LanguageData>
