@@ -32,7 +32,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>Mod\Assemblies\</OutputPath>
+    <OutputPath>AcSmartSpeed\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -54,26 +54,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Assemblies\Assembly-CSharp.csproj">
-      <Project>{ad682a5a-33c5-4f4d-9d4b-24198d2156b8}</Project>
-      <Name>Assembly-CSharp</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Mod\About\About.xml" />
-    <Content Include="Mod\About\preview.png" />
-    <Content Include="Mod\About\PublishedFileId.txt" />
-    <Content Include="Mod\Assemblies\ACSmartSpeed.dll" />
-    <Content Include="Mod\Languages\English\Keyed\ACSmartSpeedStrings.xml" />
-    <Content Include="Mod\Languages\Korean\Keyed\ACSmartSpeedStrings.xml" />
-    <Content Include="Mod\Textures\UI\TimeControls\TimeSpeedButton_Ultrafast.png" />
+    <Content Include="AcSmartSpeed\About\About.xml" />
+    <Content Include="AcSmartSpeed\About\preview.png" />
+    <Content Include="AcSmartSpeed\About\PublishedFileId.txt" />
+    <Content Include="AcSmartSpeed\Assemblies\ACSmartSpeed.dll" />
+    <Content Include="AcSmartSpeed\Languages\English\Keyed\ACSmartSpeedStrings.xml" />
+    <Content Include="AcSmartSpeed\Languages\Korean\Keyed\ACSmartSpeedStrings.xml" />
+    <Content Include="AcSmartSpeed\Textures\UI\TimeControls\TimeSpeedButton_Ultrafast.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assemblies\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assembly-CSharp\Assembly-CSharp.csproj">
+      <Project>{0662e0c9-c2c0-430b-9165-10fc73b33e44}</Project>
+      <Name>Assembly-CSharp</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /E /Y /I "$(ProjectDir)Mod" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\$(TargetName)\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /E /Y /I "$(ProjectDir)$(TargetName)" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\$(TargetName)\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

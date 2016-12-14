@@ -29,18 +29,18 @@ namespace AlcoholV.Detouring
                         case AcSmartSpeed.Option.Fast:
                             return 2f;
                         case AcSmartSpeed.Option.Half:
-                            return speed(currTimeSpeed)/2f;
+                            return Speed(currTimeSpeed)/2f;
                         case AcSmartSpeed.Option.Ignore:
-                            return speed(currTimeSpeed);
+                            return Speed(currTimeSpeed);
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
                 }
-                return speed(currTimeSpeed);
+                return Speed(currTimeSpeed);
             }
         }
 
-        private float speed(TimeSpeed currTimeSpeed)
+        private float Speed(TimeSpeed currTimeSpeed)
         {
             switch (currTimeSpeed)
             {
