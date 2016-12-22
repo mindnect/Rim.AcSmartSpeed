@@ -29,18 +29,18 @@ namespace AlcoholV.Detouring
                         case AcSmartSpeed.Option.Fast:
                             return 2f;
                         case AcSmartSpeed.Option.Half:
-                            return Speed(currTimeSpeed)/2f;
+                            return TickRate(currTimeSpeed)/2f;
                         case AcSmartSpeed.Option.Ignore:
-                            return Speed(currTimeSpeed);
+                            return TickRate(currTimeSpeed);
                         default:
                             throw new ArgumentOutOfRangeException();
                     }
                 }
-                return Speed(currTimeSpeed);
+                return TickRate(currTimeSpeed);
             }
         }
 
-        private float Speed(TimeSpeed currTimeSpeed)
+        private float TickRate(TimeSpeed currTimeSpeed)
         {
             switch (currTimeSpeed)
             {
@@ -51,12 +51,20 @@ namespace AlcoholV.Detouring
                 case TimeSpeed.Fast:
                     return 3f;
                 case TimeSpeed.Superfast:
+                    if (Find.VisibleMap == null)
+                    {
+                        return 150f;
+                    }
                     if (NothingHappeningInGame())
                     {
                         return 12f;
                     }
                     return 6f;
                 case TimeSpeed.Ultrafast:
+                    if (Find.VisibleMap == null)
+                    {
+                        return 250f;
+                    }
                     return 15f;
                 default:
                     return -1f;

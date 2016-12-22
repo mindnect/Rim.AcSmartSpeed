@@ -39,10 +39,6 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="UnityEngine">
       <HintPath>..\UnityEngine.dll</HintPath>
@@ -69,8 +65,15 @@
   <ItemGroup>
     <Folder Include="Assemblies\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Source\Assembly-CSharp.csproj">
+      <Project>{ecae55cc-5823-43da-9689-298accd15a3e}</Project>
+      <Name>Assembly-CSharp</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /E /Y /I "$(ProjectDir)$(TargetName)" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\$(TargetName)\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /E /Y /I "$(ProjectDir)Mod" "C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\$(ProjectName)\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
