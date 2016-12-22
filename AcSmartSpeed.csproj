@@ -57,13 +57,12 @@
     <Content Include="Mod\About\About.xml" />
     <Content Include="Mod\About\preview.png" />
     <Content Include="Mod\About\PublishedFileId.txt" />
-    <Content Include="Mod\Assemblies\ACSmartSpeed.dll" />
     <Content Include="Mod\Languages\English\Keyed\ACSmartSpeedStrings.xml" />
     <Content Include="Mod\Languages\Korean\Keyed\ACSmartSpeedStrings.xml" />
     <Content Include="Mod\Textures\UI\TimeControls\TimeSpeedButton_Ultrafast.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assemblies\" />
+    <Folder Include="Mod\Assemblies\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Source\Assembly-CSharp.csproj">
